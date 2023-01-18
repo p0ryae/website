@@ -81,13 +81,13 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-12 text-center email">
-            <a href="#" class="hover-target">dashcruft@gmail.com</a>
+            <button id="copy" class="hover-target">dashcruft@gmail.com</button>
           </div>
           <div class="col-12 text-center social mt-4">
-            <a href="https://youtube.com/dashcruft" class="hover-target" target="_blank">youtube</a>
+            <a href="https://youtube.com/dashcruft" class="hover-target" target="_blank">YouTube</a>
             <a href="https://www.linkedin.com/in/porya-dashtipour-144a521aa/" class="hover-target"
-              target="_blank">linkedin</a>
-            <a href="https://github.com/p0ryae" class="hover-target" target="_blank">github</a>
+              target="_blank">LinkedIn</a>
+            <a href="https://github.com/p0ryae" class="hover-target" target="_blank">Github</a>
           </div>
         </div>
       </div>
@@ -112,6 +112,9 @@ export default {
     document.getElementById("homePg").addEventListener("click", function () {
       window.location.href = "/";
     });
+    document.getElementById("copy").addEventListener("click", function () {
+      navigator.clipboard.writeText(document.getElementById("copy").innerHTML);
+    })
   },
   unmounted() {
     window.removeEventListener("scroll", this.handleScroll);
@@ -334,6 +337,7 @@ body {
   font-size: 15px;
   font-weight: 700;
   letter-spacing: 1px;
+  text-decoration: none;
   color: #ffeba7;
 }
 
@@ -362,8 +366,21 @@ body {
   width: 30px;
 }
 
-.email a {
+.email button {
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #ffffff;
+  border: none;
+  background: none;
   font-size: 24px;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.email button:hover {
+  color: rgb(103, 71, 219);
+  transition: all 0.2s;
 }
 
 .nav-but-wrap {
