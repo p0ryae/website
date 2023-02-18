@@ -1,4 +1,6 @@
 <template>
+  <div class="navbarMenu reveal-1" id="navbarMenu"></div>
+
   <div class="headerSection">
     <h1 id="homePg">Porya Dashtipour</h1>
     <div class="selector">
@@ -10,7 +12,7 @@
 
     <div class="mobileSelector">
       <div class="nav-but-wrap">
-        <div class="menu-icon hover-target">
+        <div class="menu-icon hover-target" id="navbar">
           <span class="menu-icon__line menu-icon__line-left"></span>
           <span class="menu-icon__line"></span>
           <span class="menu-icon__line menu-icon__line-right"></span>
@@ -54,8 +56,8 @@
           <div class="texts">
             <h3>Lazap</h3>
             <h4>
-              Lightweight cross-platform launcher with a modernist look and
-              experience.
+              Lightweight cross-platform launcher, unifying your gaming world
+              into a single, modern library 🎮
             </h4>
           </div>
         </div>
@@ -79,23 +81,33 @@
     <h1>Contact</h1>
     <div class="contact-section">
       <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-12 text-center email">
-            <button id="copy" class="hover-target">dashcruft@gmail.com</button>
-          </div>
-          <div class="col-12 text-center social mt-4">
-            <a href="https://youtube.com/dashcruft" class="hover-target" target="_blank">YouTube</a>
-            <a href="https://www.linkedin.com/in/porya-dashtipour-144a521aa/" class="hover-target"
-              target="_blank">LinkedIn</a>
-            <a href="https://github.com/p0ryae" class="hover-target" target="_blank">Github</a>
-          </div>
+        <div class="col-12 text-center social">
+          <a
+            href="https://youtube.com/dashcruft"
+            class="hover-target"
+            target="_blank"
+            ><img src="./assets/icons/youtube.svg" alt=""
+          /></a>
+          <a
+            href="https://github.com/p0ryae"
+            class="hover-target"
+            target="_blank"
+            ><img src="./assets/icons/github.svg" alt=""
+          /></a>
+          <a
+            href="https://www.linkedin.com/in/porya-dashtipour-144a521aa/"
+            class="hover-target"
+            target="_blank"
+          >
+            <img src="./assets/icons/linkedin-in.svg" alt="" />
+          </a>
         </div>
       </div>
     </div>
   </section>
 
   <footer>
-    <h1>Porya Dashtipour - Copyright © 2023-24</h1>
+    <h1>Copyright © 2023 p0ryae</h1>
   </footer>
 </template>
 
@@ -112,9 +124,19 @@ export default {
     document.getElementById("homePg").addEventListener("click", function () {
       window.location.href = "/";
     });
-    document.getElementById("copy").addEventListener("click", function () {
-      navigator.clipboard.writeText(document.getElementById("copy").innerHTML);
-    })
+
+    /*document.getElementById("navbar").addEventListener("click", function () {
+      if (document.getElementById("navbarMenu").style.display == "flex") {
+        document.getElementById("navbarMenu").style.display = "none";
+      } else if (
+        document.getElementById("navbarMenu").style.display == "none"
+      ) {
+        document.getElementById("navbarMenu").style.display = "flex";
+      } else if (!document.getElementById("navbarMenu").style.display) {
+        document.getElementById("navbarMenu").style.display = "flex";
+      }
+    });
+    */
   },
   unmounted() {
     window.removeEventListener("scroll", this.handleScroll);
@@ -128,11 +150,11 @@ export default {
 
 html,
 body {
-  background: #1e1e22 !important;
+  background: #111111 !important;
 }
 
 #app {
-  background-color: #1e1e22;
+  background: #111111 !important;
   font-family: "Poppins";
   font-size: 16px;
   color: #fff;
@@ -220,8 +242,8 @@ body {
 
 .section .home-preview {
   width: 44vw;
-  border: 3px rgb(124, 98, 216) solid;
-  border-radius: 20px;
+  border: 6px rgb(124, 98, 216) solid;
+  border-radius: 40px;
 }
 
 .section h1 {
@@ -241,6 +263,10 @@ body {
 
 .reveal {
   animation: reveal 1s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.reveal-1 {
+  animation: reveal-1 1s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 .section-1 {
@@ -268,10 +294,11 @@ body {
   justify-content: flex-end;
   flex-direction: column;
   width: 500px;
-  height: 360px;
-  background-color: rgb(103, 71, 219);
+  height: 160px;
+  background-color: #131313;
+  border: 6px rgb(124, 98, 216) solid;
   margin: 20px;
-  border-radius: 20px;
+  border-radius: 30px;
   transition: transform 0.2s;
 }
 
@@ -292,10 +319,10 @@ body {
   display: flex;
   padding: 20px;
   justify-content: center;
+  align-items: center;
   flex-direction: row;
-  background-color: rgba(0, 0, 0, 0.4);
   width: 100%;
-  height: 26%;
+  height: 100%;
   border-radius: 0px 0px 20px 20px;
 }
 
@@ -311,15 +338,14 @@ body {
 }
 
 .section-1 .project .info h4 {
+  color: #d8d8d8;
   font-size: 16px;
 }
 
 .section-1 .project .info img {
   user-select: none;
-}
-
-.contact-section {
-  margin-top: 20px;
+  width: 100px;
+  height: 100px;
 }
 
 .contact-section a {
@@ -327,18 +353,26 @@ body {
   font-size: 32px;
   font-weight: 900;
   letter-spacing: 1px;
-  color: #fff;
+  color: #cfcfcf;
   display: inline-block;
 }
 
 .contact-section .social a {
   margin-left: 8px;
   margin-right: 8px;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 700;
   letter-spacing: 1px;
+  height: 40px;
+  width: 40px;
   text-decoration: none;
-  color: #ffeba7;
+  transition: all 100ms linear;
+  filter: brightness(0) invert(0.8);
+  margin: 14px;
+}
+
+.contact-section .social a:hover {
+  scale: 1.1;
 }
 
 .menu-icon {
@@ -429,26 +463,47 @@ body {
   width: 30px;
 }
 
+.navbarMenu {
+  position: absolute;
+  display: none;
+  width: 65%;
+  height: 350px;
+  margin: 30px;
+  z-index: 1000;
+  background-color: black;
+  border-radius: 30px;
+}
+
 footer {
   width: 100%;
   height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #151518;
-  color: white;
-  margin-top: 100px;
+  color: rgb(122, 122, 122);
 }
 
 footer h1 {
   margin: 0px;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 @keyframes reveal {
   0% {
     transform: translate(0, 5%);
     opacity: 0;
+  }
+
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes reveal-1 {
+  0% {
+    transform: translate(0, 5%);
+    opacity: 0.5;
   }
 
   100% {
@@ -508,7 +563,7 @@ footer h1 {
 
   .section .left {
     margin-top: 10px;
-    margin-left: 0px;
+    margin-left: 2px;
     margin-right: auto;
   }
 
@@ -520,13 +575,33 @@ footer h1 {
 
 @media only screen and (max-width: 700px) {
   .section .right img {
-    width: 320px;
+    width: 340px;
   }
 
   .section .home-preview {
     width: 44vw;
-    border: 3px rgb(124, 98, 216) solid;
-    border-radius: 10px;
+    
+    border-radius: 20px;
+  }
+
+  .section-1 .projects {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section-1 .project {
+    width: 87vw;
+    height: 140px;
+    margin: 10px;
+  }
+
+  .section-1 .project .info img {
+    width: 75px;
+    height: 75px;
+  }
+
+  .section-1 .project .info h4 {
+    font-size: 14px;
   }
 
   footer h1 {
