@@ -25,6 +25,7 @@
     <div class="normal">
       <div class="left">
         <h1>Software Engineer</h1>
+        <h1>Data Engineer</h1>
         <h1>Full-Stack Developer</h1>
         <h1>Linux Enthusiast</h1>
       </div>
@@ -41,6 +42,7 @@
 
       <div class="left">
         <h1>Software Engineer</h1>
+        <h1>Data Engineer</h1>
         <h1>Full-Stack Developer</h1>
         <h1>Linux Enthusiast</h1>
       </div>
