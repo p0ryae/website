@@ -2,12 +2,12 @@
   <div class="navbarMenu reveal-1" id="navbarMenu"></div>
 
   <div class="headerSection">
-    <h1 id="homePg">Porya Dashtipour</h1>
+    <h1 id="homePg">Porya D.</h1>
     <div class="selector">
       <a href="#home">Home</a>
       <a href="#projects">Projects</a>
       <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a href="#contact">Socials</a>
     </div>
 
     <div class="mobileSelector">
@@ -31,13 +31,13 @@
       </div>
 
       <div class="right">
-        <img class="home-preview" src="./assets/lazap.png" alt="" />
+        <img class="home-preview" src="./assets/woah.png" alt="" />
       </div>
     </div>
 
     <div class="mobile">
       <div class="right">
-        <img class="home-preview" src="./assets/lazap.png" alt="" />
+        <img class="home-preview" src="./assets/woah.png" alt="" />
       </div>
 
       <div class="left">
@@ -76,33 +76,26 @@
           </div>
         </div>
       </div>
+      <div class="project" id="zeurus">
+        <div class="info">
+          <img src="./assets/julia.png" alt="">
+          <div class="texts">
+            <h3>PJ_Judge</h3>
+            <h4> Artificial Intelligence chatbot with code Judging capablity using advanced NLP, natively written in Julia
+            </h4>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="section-1 reveal" id="contact">
-    <h1>Contact</h1>
+    <h1>Socials</h1>
     <div class="contact-section">
       <div class="container">
         <div class="col-12 text-center social">
-          <a
-            href="https://youtube.com/dashcruft"
-            class="hover-target"
-            target="_blank"
-            ><img src="./assets/icons/youtube.svg" alt=""
-          /></a>
-          <a
-            href="https://github.com/p0ryae"
-            class="hover-target"
-            target="_blank"
-            ><img src="./assets/icons/github.svg" alt=""
-          /></a>
-          <a
-            href="https://www.linkedin.com/in/porya-dashtipour-144a521aa/"
-            class="hover-target"
-            target="_blank"
-          >
-            <img src="./assets/icons/linkedin-in.svg" alt="" />
-          </a>
+          <a href="https://github.com/p0ryae" class="hover-target" target="_blank"><img src="./assets/icons/github.svg"
+              alt="" /></a>
         </div>
       </div>
     </div>
@@ -225,7 +218,7 @@ body {
   flex-direction: row;
   justify-content: center;
   margin-top: 3.5vw;
-  margin-bottom: 7vw;
+  margin-bottom: 5vw;
 }
 
 .section .left {
@@ -243,13 +236,12 @@ body {
 }
 
 .section .home-preview {
-  width: 44vw;
-  border: 6px rgb(124, 98, 216) solid;
-  border-radius: 40px;
+  width: 25vw;
+  margin-left: 10vw;
 }
 
 .section h1 {
-  color: rgb(255, 255, 255);
+  color: #b4b0ef;
   margin: 6px;
   font-size: 60px;
   font-weight: 600;
@@ -287,7 +279,11 @@ body {
 
 .section-1 .projects {
   margin: 30px;
+  width: 60%;
+  justify-content: center;
+  align-items: center;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .section-1 .project {
@@ -544,7 +540,6 @@ footer h1 {
   }
 
   .headerSection h1 {
-    width: 10px;
     margin-right: auto;
   }
 
@@ -582,17 +577,18 @@ footer h1 {
 
   .section .home-preview {
     width: 44vw;
-    
+    margin-left: 0vw;
     border-radius: 20px;
   }
 
   .section-1 .projects {
     display: flex;
     flex-direction: column;
+    width: 85%;
   }
 
   .section-1 .project {
-    width: 87vw;
+    width: 80vw;
     height: 140px;
     margin: 10px;
   }
