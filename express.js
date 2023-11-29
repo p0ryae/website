@@ -12,8 +12,12 @@ app.use(compression())
 app.use(express.json());
 app.use(express.static('dist'));
 
-app.use('/dist', function (req, res) {
-  res.sendFile(path.join(__dirname + '/index.html'));
+app.get("/*", function (req, res) {
+  res.sendFile(path.join(__dirname, "dist/index.html"), function (err) {
+    if (err) {
+      res.status(500).send(err);
+    }
+  });
 });
 
 const server = http.createServer(app);
