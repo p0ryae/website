@@ -7,9 +7,9 @@
                 <br>
             </p>
             <div class="buttons-list">
-                <button onclick="location.href+='projects';">Projects</button>
-                <button onclick="window.open('https://github.com/p0ryae', '_blank')">Github</button>
-                <button onclick="window.open('https://www.linkedin.com/in/p0ryae/', '_blank')">LinkedIn</button>
+                <button @click="goToProjects">Projects</button>
+                <button @click="openLink('https://github.com/p0ryae')">GitHub</button>
+                <button @click="openLink('https://www.linkedin.com/in/p0ryae/')">LinkedIn</button>
             </div>
         </div>
     </div>
@@ -18,6 +18,14 @@
 <script>
 export default {
     name: 'HomeComponent',
+    methods: {
+        goToProjects() {
+            this.$router.push('/projects');
+        },
+        openLink(link) {
+            window.open(link, '_blank');
+        },
+    },
 }
 </script>
   

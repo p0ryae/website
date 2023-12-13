@@ -25,11 +25,9 @@
                         <a href="https://github.com/PJ-Duo/PJ-Judge" target="_blank">Source Code</a>
                     </div>
                     <p>
-                        WIP Artificial Intelligence algorithm with code Judging capability, using NLP techniques.
-                        Optimized memory management techniques in Julia DataFrames, enabling processing of larger
-                        datasets within limited resources.
-                        Applied sentiment analysis algorithm using Flux.jl to effectively filter out negative data from
-                        the input DataFrames for better model performance.
+                        Work-in-Progress AI algorithm with code assessment using NLP techniques. Optimizing
+                        memory management in Julia DataFrames for efficient processing of large datasets. Employing
+                        sentiment analysis with Flux.jl to filter out negative data and enhance model performance.
                     </p>
                 </div>
             </div>

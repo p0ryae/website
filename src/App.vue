@@ -33,12 +33,12 @@ export default {
 
 html,
 body {
-  background: #111113 !important;
+  background: #0c0b0e !important;
   margin: 0px;
 }
 
 #app {
-  background: #111113 !important;
+  background: #0c0b0e !important;
   font-family: "JetBrains Mono";
   font-weight: 500;
   font-size: 16px;
