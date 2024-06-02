@@ -10,20 +10,28 @@
     </div>
   </div>
 
-  <transition enter-active-class="animate__animated animate__fadeIn animate__faster"
-    leave-active-class="animate__animated animate__fadeOut animate__faster">
+  <transition
+    enter-active-class="animate__animated animate__fadeIn animate__faster"
+    leave-active-class="animate__animated animate__fadeOut animate__faster"
+  >
     <router-view />
   </transition>
-  <footer>
-    <p>
-      © p0ryae 2023
-    </p>
-  </footer>
+
+  <footer>© p0ryae 2024</footer>
 </template>
 
 <script>
 export default {
   name: "App",
+  computed: {
+    currentRouteComponent() {
+      if (this.$route.matched[0]) {
+        return this.$route.matched[0].components.default.name;
+      } else {
+        return "none";
+      }
+    },
+  },
 };
 </script>
 
@@ -42,12 +50,21 @@ body {
   font-family: "JetBrains Mono";
   font-weight: 500;
   font-size: 16px;
-  color: #fff;
+  color: #d4d4d4;
   overflow-x: hidden;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   margin: 0px;
+}
+
+p {
+  line-height: 1.6rem;
+  font-size: 16px;
+}
+
+h2 {
+  margin-bottom: 5px;
 }
 
 .header {
@@ -76,7 +93,9 @@ body {
 .header .sections {
   align-items: center;
   display: flex;
-  gap: 1.5rem
+  gap: 1.5rem;
+  user-select: none;
+  cursor: default !important;
 }
 
 .middle {
@@ -84,7 +103,6 @@ body {
   flex-direction: row;
   justify-content: center;
   margin-top: 10px;
-  margin-bottom: 80px;
 }
 
 .middle .inside {
@@ -103,18 +121,18 @@ footer {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 60px;
+  margin-bottom: 40px;
   color: white;
   text-align: center;
   font-size: 14px;
   margin-top: auto;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1100px) {
   .header {
     padding: 1.5rem 1.5rem;
   }
-  
+
   .titlebar {
     width: 100% !important;
   }
@@ -123,13 +141,22 @@ footer {
     width: 80% !important;
   }
 
-  .inside .buttons-list button {
-    width: 120px;
-    margin-right: 8px !important;
+  .middle .inside .buttons-list {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .middle .inside .buttons-list button {
+    width: 160px;
+    height: 45px;
+    margin-bottom: 10px !important;
+    margin-right: 0px !important;
   }
 
   .sections {
-    gap: 0.5rem !important
+    gap: 0.5rem !important;
   }
 }
 </style>
