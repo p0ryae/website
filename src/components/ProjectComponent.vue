@@ -2,7 +2,7 @@
   <div class="middle">
     <div class="inside">
       <h2>Projects</h2>
-      <p>most of my projects are @ github, but below are the most notable:</p>
+      <p>Most of my projects are @ github, but below are the most notable:</p>
       <div class="line"></div>
       <div class="list">
         <div class="project">
@@ -37,11 +37,11 @@
             >
           </div>
           <p>
-            Lightweight cross-platform client, unifying games into a single,
-            modern library. Backend uses Rust, Frontend uses Vite, thanks to
-            Tauri toolkit. Ensured customization options, providing users with
-            the ability to personalize the software according to their
-            preferences.
+            Lightweight Cross-Platform software, unifying games into a single,
+            modern library. Backend uses Rust, Frontend uses Vue + Vite, thanks
+            to the Tauri toolkit. Received over +110 user-given stars on GitHub,
+            and perceived by Engineers within companies such as 1Password and
+            ExitLag.
           </p>
         </div>
         <div class="project">
@@ -54,11 +54,12 @@
             <a href="https://liemcomputing.ca/" target="_blank">To Website</a>
           </div>
           <p>
-            An automated platform for SD40 district students to access
-            programming courses. Features include secure login, progress
-            tracking, assessments, SECCOMP for restrict system calls and
-            sandboxing program execution, and socket-to-socket communication.
-            It's utilized by hundreds of active NWSS students daily.
+            An automated, secure and efficient platform for SD40 district
+            students programming courses. Features include secure login,
+            progress tracking, assessments, SECCOMP for restrict system calls
+            and sandboxing program execution, and socket-to-socket
+            communication. It's utilized by hundreds of active NWSS students
+            daily, with well over +146k true-user traffic weekly.
           </p>
         </div>
       </div>
@@ -93,6 +94,7 @@ p {
   height: 100%;
   width: 100%;
   color: #e4e4e7;
+  margin-bottom: 40px;
 }
 
 .list .project {

@@ -2,7 +2,7 @@
   <div class="middle">
     <div class="inside">
       <h2>Articles</h2>
-      <p>no articles yet.</p>
+      <p>---</p>
     </div>
   </div>
 </template>

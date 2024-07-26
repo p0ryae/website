@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <div class="titlebar">
-      <router-link to="/">p0ryae</router-link>
+      <router-link to="/">home</router-link>
       <div class="sections">
         <router-link to="/projects">projects</router-link>
         <router-link to="/articles">articles</router-link>
@@ -17,7 +17,7 @@
     <router-view />
   </transition>
 
-  <footer>© p0ryae 2024</footer>
+  <footer>© Porya 2024</footer>
 </template>
 
 <script>

@@ -2,13 +2,12 @@
   <div class="middle">
     <div class="inside">
       <h2>Porya D.</h2>
-      <p>Software Engineer_</p>
+      <p>UBC | Software Engineer</p>
       <div class="buttons-list">
-        <button @click="openLink('https://github.com/p0ryae')">github</button>
+        <button @click="openLink('https://github.com/p0ryae')">GitHub</button>
         <button @click="openLink('https://www.linkedin.com/in/p0ryae/')">
-          linkedin
+          LinkedIn
         </button>
-        <button @click="goToProjects">project</button>
       </div>
     </div>
   </div>
