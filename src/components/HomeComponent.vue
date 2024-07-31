@@ -1,13 +1,20 @@
 <template>
   <div class="middle">
     <div class="inside">
-      <h2>Porya D.</h2>
-      <p>UBC | Software Engineer</p>
-      <div class="buttons-list">
-        <button @click="openLink('https://github.com/p0ryae')">GitHub</button>
-        <button @click="openLink('https://www.linkedin.com/in/p0ryae/')">
-          LinkedIn
-        </button>
+      <div class="parent">
+        <img src="../assets/logo.png" alt="Logo" />
+        <div class="parent2">
+          <h2>Porya D.</h2>
+          <h4>UBC | Software Engineer</h4>
+          <div class="buttons-list">
+            <a href="https://github.com/p0ryae" target="_blank">
+              <i class="fab fa-github fa-2x"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/p0ryae/" target="_blank">
+              <i class="fab fa-linkedin fa-5x"></i>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -33,33 +40,46 @@ export default {
   margin-bottom: 20px;
 }
 
+.inside h4 {
+  margin-top: 5px;
+}
+
 .inside .buttons-list {
   display: flex;
   flex-direction: row;
 }
 
-.inside .buttons-list button {
-  width: 130px;
-  height: 40px;
+.inside .parent {
+  margin-top: 5px;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.inside .parent img {
+  border-radius: 20%;
+  width: 150px;
+  height: 150px;
+}
+
+.inside .parent2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.inside .buttons-list a {
   text-decoration: none;
-  border: none;
-  border-radius: 10px;
+  color: inherit;
   margin-right: 12px;
-  background-color: #782c8d00;
-  color: #d0d0d4;
-  font-family: "JetBrains Mono";
-  border: 2px solid #fff;
-  font-weight: 700;
-  font-size: 16px;
 }
 
-.inside .buttons-list:last-child {
-  margin-right: 0px;
-}
-
-.inside .buttons-list button:hover {
-  cursor: pointer;
-  border: 3px solid #fff;
+.inside .buttons-list i {
+  font-size: 30px;
+  width: 30px;
+  height: 30px;
+  margin: 0px;
 }
 
 .banner {

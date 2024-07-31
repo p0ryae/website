@@ -1,11 +1,11 @@
 <template>
   <div class="header">
     <div class="titlebar">
-      <router-link to="/">home</router-link>
+      <router-link to="/">🏡 home</router-link>
       <div class="sections">
-        <router-link to="/projects">projects</router-link>
-        <router-link to="/articles">articles</router-link>
-        <router-link to="/contact">contact</router-link>
+        <router-link to="/projects">🎯 projects</router-link>
+        <router-link to="/articles">📰 articles</router-link>
+        <router-link to="/contact">☎️ contact</router-link>
       </div>
     </div>
   </div>
@@ -64,6 +64,7 @@ p {
 }
 
 h2 {
+  margin-top: 5px;
   margin-bottom: 5px;
 }
 
@@ -88,6 +89,8 @@ h2 {
   justify-content: space-between;
   display: flex;
   width: 30%;
+  text-align: center;
+  gap: 0.5rem;
 }
 
 .header .sections {
@@ -96,13 +99,14 @@ h2 {
   gap: 1.5rem;
   user-select: none;
   cursor: default !important;
+  text-align: center;
 }
 
 .middle {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .middle .inside {
@@ -141,22 +145,21 @@ footer {
     width: 80% !important;
   }
 
-  .middle .inside .buttons-list {
-    margin-top: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .middle .inside .buttons-list button {
-    width: 160px;
-    height: 45px;
-    margin-bottom: 10px !important;
-    margin-right: 0px !important;
-  }
-
   .sections {
     gap: 0.5rem !important;
+  }
+
+  .inside .parent {
+    display: flex;
+  }
+
+  .inside img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .inside .parent2 {
+    height: 50% !important;
   }
 }
 </style>

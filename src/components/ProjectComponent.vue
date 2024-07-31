@@ -1,10 +1,29 @@
 <template>
   <div class="middle">
     <div class="inside">
-      <h2>Projects</h2>
+      <h2>🎯 Projects</h2>
       <p>Most of my projects are @ github, but below are the most notable:</p>
       <div class="line"></div>
       <div class="list">
+        <div class="project">
+          <div class="top">
+            <img src="../assets/icons/lazap.png" alt="Lazap Logo" />
+            <div class="title-section">
+              <h2>Lazap</h2>
+              <h3>⦁ Open-Source</h3>
+            </div>
+            <a href="https://github.com/Lazap-Development/Lazap" target="_blank"
+              >Source Code</a
+            >
+          </div>
+          <p>
+            A lightweight Cross-Platform Software, unifying various clients into
+            a single, modern library. Backend uses Rust, Frontend uses Vue +
+            Vite, thanks to the Tauri toolkit. Received over 100+ user-given
+            stars on GitHub, and perceived by Engineers within companies such as
+            1Password. Certified as a 100% clean software by Softpedia.
+          </p>
+        </div>
         <div class="project">
           <div class="top">
             <img src="../assets/rust-logo.png" alt="Rust Logo" />
@@ -23,25 +42,6 @@
             range of GPUs and integrated GPUs, while also offering
             cross-platform support for Windows, MacOS, Linux, and Android
             builds.
-          </p>
-        </div>
-        <div class="project">
-          <div class="top">
-            <img src="../assets/icons/lazap.png" alt="Lazap Logo" />
-            <div class="title-section">
-              <h2>Lazap</h2>
-              <h3>⦁ Open-Source</h3>
-            </div>
-            <a href="https://github.com/Lazap-Development/Lazap" target="_blank"
-              >Source Code</a
-            >
-          </div>
-          <p>
-            Lightweight Cross-Platform software, unifying games into a single,
-            modern library. Backend uses Rust, Frontend uses Vue + Vite, thanks
-            to the Tauri toolkit. Received over +110 user-given stars on GitHub,
-            and perceived by Engineers within companies such as 1Password and
-            ExitLag.
           </p>
         </div>
         <div class="project">
