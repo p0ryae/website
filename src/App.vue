@@ -1,11 +1,15 @@
 <template>
   <div class="header">
     <div class="titlebar">
-      <router-link to="/">🏡 home</router-link>
+      <router-link activeClass="active" to="/">🏡 [porya.me]</router-link>
       <div class="sections">
-        <router-link to="/projects">🎯 projects</router-link>
-        <router-link to="/articles">📰 articles</router-link>
-        <router-link to="/contact">☎️ contact</router-link>
+        <router-link activeClass="active" to="/experience"
+          >💼 [experience]</router-link
+        >
+        <router-link activeClass="active" to="/projects"
+          >🎯 [projects]</router-link
+        >
+        <router-link activeClass="active" to="/blog">📰 [blog]</router-link>
       </div>
     </div>
   </div>
@@ -17,7 +21,7 @@
     <router-view />
   </transition>
 
-  <footer>© Porya 2024</footer>
+  <footer>© Porya Dashtipour 2024</footer>
 </template>
 
 <script>
@@ -36,8 +40,8 @@ export default {
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"); */
 
 html,
 body {
@@ -47,7 +51,7 @@ body {
 
 #app {
   background: #0c0b0e !important;
-  font-family: "JetBrains Mono";
+  font-family: "Montserrat", serif;
   font-weight: 500;
   font-size: 16px;
   color: #d4d4d4;
@@ -61,6 +65,7 @@ body {
 p {
   line-height: 1.6rem;
   font-size: 16px;
+  font-weight: 600;
 }
 
 h2 {
@@ -78,10 +83,12 @@ h2 {
 .header a {
   text-decoration: none;
   color: white;
+  transition: color 0.15s ease;
 }
 
 .header a:hover {
-  color: white;
+  color: #7e4cea;
+  transition: color 0.15s ease;
 }
 
 .header .titlebar {
@@ -90,7 +97,12 @@ h2 {
   display: flex;
   width: 30%;
   text-align: center;
+  font-weight: 600;
   gap: 0.5rem;
+}
+
+.header .titlebar .active {
+  color: #7e4cea;
 }
 
 .header .sections {
@@ -100,6 +112,14 @@ h2 {
   user-select: none;
   cursor: default !important;
   text-align: center;
+}
+
+.sections .active {
+  color: #7e4cea;
+}
+
+.sections a:hover {
+  color: #7e4cea;
 }
 
 .middle {
@@ -130,6 +150,16 @@ footer {
   text-align: center;
   font-size: 14px;
   margin-top: auto;
+  font-weight: 600;
+}
+
+.line {
+  height: 2px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 @media only screen and (max-width: 1100px) {
@@ -142,7 +172,7 @@ footer {
   }
 
   .inside {
-    width: 80% !important;
+    width: 87% !important;
   }
 
   .sections {

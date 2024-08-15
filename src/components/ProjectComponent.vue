@@ -2,10 +2,11 @@
   <div class="middle">
     <div class="inside">
       <h2>🎯 Projects</h2>
-      <p>Most of my projects are @ github, but below are the most notable:</p>
+      <p>Most of my projects are @ github, with the highlights below:</p>
       <div class="line"></div>
       <div class="list">
         <div class="project">
+          <div class="item"></div>
           <div class="top">
             <img src="../assets/icons/lazap.png" alt="Lazap Logo" />
             <div class="title-section">
@@ -25,8 +26,9 @@
           </p>
         </div>
         <div class="project">
+          <div class="item"></div>
           <div class="top">
-            <img src="../assets/rust-logo.png" alt="Rust Logo" />
+            <img src="../assets/icons/rust.png" alt="Rust Logo" />
             <div class="title-section">
               <h2>TRS_24</h2>
               <h3>⦁ Open-Source</h3>
@@ -44,24 +46,6 @@
             builds.
           </p>
         </div>
-        <div class="project">
-          <div class="top">
-            <img src="../assets/liemcomputing.png" alt="Lazap Logo" />
-            <div class="title-section">
-              <h2>LiemComputing</h2>
-              <h3>⦁ Closed-Source</h3>
-            </div>
-            <a href="https://liemcomputing.ca/" target="_blank">To Website</a>
-          </div>
-          <p>
-            An automated, secure and efficient platform for SD40 district
-            students programming courses. Features include secure login,
-            progress tracking, assessments, SECCOMP for restrict system calls
-            and sandboxing program execution, and socket-to-socket
-            communication. It's utilized by hundreds of active NWSS students
-            daily, with well over +146k true-user traffic weekly.
-          </p>
-        </div>
       </div>
     </div>
   </div>
@@ -70,24 +54,15 @@
 <script>
 export default {
   name: "ProjectComponent",
+  mounted() {
+    document.title = "🎯 Project | porya.me";
+  },
 };
 </script>
 
 <style scoped>
-h1 {
-  margin-bottom: 4px;
-}
-
 p {
-  margin-bottom: 18px;
-  color: #d0d0d4;
-}
-
-.line {
-  height: 2px;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
+  margin-bottom: 0 !important;
 }
 
 .list {
@@ -95,10 +70,26 @@ p {
   width: 100%;
   color: #e4e4e7;
   margin-bottom: 40px;
+  margin-left: -10px;
 }
 
 .list .project {
-  margin-top: 20px;
+  border-left: 4px solid #7e4ceab9;
+  padding-left: 24px;
+}
+
+.list .project:not(:last-child) {
+  padding-bottom: 20px;
+}
+
+.list .project .item {
+  background-color: #7e4cea;
+  width: 120px;
+  height: 0.6rem;
+  margin-left: -31px;
+  width: 0.6rem;
+  margin-bottom: -18px;
+  border-radius: 50%;
 }
 
 .list .project .top {
@@ -109,41 +100,43 @@ p {
 
 .list .project .top .title-section {
   line-height: 35px;
+  font-size: 14px;
 }
 
 .list .project .top h2 {
-  font-size: 22px;
   margin-right: 10px;
 }
 
 .list .project .top h3 {
   font-size: 16px;
-  font-weight: normal;
+  font-weight: 600;
   color: #8a8a8a;
   margin-top: -15px;
 }
 
 .list .project .top img {
-  width: 25px;
-  height: 25px;
+  width: 40px;
+  height: 40px;
   margin-right: 10px;
   user-select: none;
+  margin-top: -5px;
 }
 
 .list .project .top a {
   margin-left: auto;
   text-decoration: none;
-  color: #0ea5e9;
+  font-weight: 600;
+  color: #7e4cea;
 }
 
 .list .project .top a:hover {
   text-decoration: underline !important;
-  color: #0ea5e9;
 }
 
 .list .project p {
-  margin-top: 0px;
-  line-height: 26px;
+  padding-bottom: 10px;
+  margin-bottom: 0px !important;
+  margin-top: 0px !important;
 }
 
 @media screen and (max-width: 768px) {

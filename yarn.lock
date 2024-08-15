@@ -527,6 +527,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"animate.css@npm:^4.1.1":
+  version: 4.1.1
+  resolution: "animate.css@npm:4.1.1"
+  checksum: 10c0/28fcf5a5f502e4c12186846d22aa1cd63b835955160a97116930c78bff8a89135aa5c57f94010252a29456ada7cfc8ed8791cac02521ec6402befaf883937159
+  languageName: node
+  linkType: hard
+
 "ansi-regex@npm:^5.0.1":
   version: 5.0.1
   resolution: "ansi-regex@npm:5.0.1"
@@ -1649,11 +1656,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"porya.dev@workspace:.":
+"porya.me@workspace:.":
   version: 0.0.0-use.local
-  resolution: "porya.dev@workspace:."
+  resolution: "porya.me@workspace:."
   dependencies:
     "@vitejs/plugin-vue": "npm:^5.0.4"
+    animate.css: "npm:^4.1.1"
     compression: "npm:^1.7.4"
     express: "npm:^4.19.2"
     vite: "npm:^5.2.8"

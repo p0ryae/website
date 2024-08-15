@@ -1,5 +1,5 @@
 {
-  "name": "porya.dev",
+  "name": "porya.me",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -10,6 +10,7 @@
     "host": "node server.js"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "compression": "^1.7.4",
     "express": "^4.19.2",
     "vite-express": "^0.16.0",
