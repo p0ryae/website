@@ -1,8 +1,8 @@
 <template>
   <div class="middle">
-    <div class="inside">
+    <div class="inside center-phone">
       <div class="parent">
-        <img src="../assets/logo.png" alt="Logo" />
+        <img src="../assets/porya.png" alt="Porya as a kid" />
         <div class="parent2">
           <h2>Porya Dashtipour</h2>
           <h4>
@@ -56,7 +56,7 @@ export default {
     },
   },
   mounted() {
-    document.title = "🏡  Home | porya.me";
+    document.title = "Home | porya.me";
   },
 };
 </script>
@@ -78,14 +78,16 @@ export default {
 
 .inside .parent {
   margin-top: 5px;
+  width: 100%;
   display: flex;
   gap: 1.5rem;
   align-items: center;
+  margin: 5px;
 }
 
 .inside .parent img {
-  border-radius: 50%;
   outline: #7e4cea 4px solid;
+  border-radius: 50%;
   width: 150px;
   height: 150px;
 }
@@ -94,7 +96,6 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%;
 }
 
 .inside .buttons-list a {

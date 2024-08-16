@@ -14,10 +14,7 @@
     </div>
   </div>
 
-  <transition
-    enter-active-class="animate__animated animate__fadeIn animate__faster"
-    leave-active-class="animate__animated animate__fadeOut animate__faster"
-  >
+  <transition>
     <router-view />
   </transition>
 
@@ -136,6 +133,10 @@ h2 {
   width: 30%;
 }
 
+.middle .center-phone {
+  align-items: flex-start;
+}
+
 .middle h1 {
   font-size: 28px;
 }
@@ -148,8 +149,8 @@ footer {
   margin-bottom: 40px;
   color: white;
   text-align: center;
-  font-size: 14px;
-  margin-top: auto;
+  font-size: 16px;
+  margin-top: 50px;
   font-weight: 600;
 }
 
@@ -162,7 +163,7 @@ footer {
   margin-top: 20px;
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1600px) {
   .header {
     padding: 1.5rem 1.5rem;
   }
@@ -182,14 +183,11 @@ footer {
   .inside .parent {
     display: flex;
   }
+}
 
-  .inside img {
-    width: 150px;
-    height: 150px;
-  }
-
-  .inside .parent2 {
-    height: 50% !important;
+@media screen and (max-width: 568px) {
+  .middle .center-phone {
+    align-items: center !important;
   }
 }
 </style>

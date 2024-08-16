@@ -2,7 +2,9 @@
   <div class="middle">
     <div class="inside">
       <h2>🎯 Projects</h2>
-      <p>Most of my projects are @ github, with the highlights below:</p>
+      <p>
+        Most of my projects are @ github, with below being the most notable:
+      </p>
       <div class="line"></div>
       <div class="list">
         <div class="project">
@@ -11,18 +13,18 @@
             <img src="../assets/icons/lazap.png" alt="Lazap Logo" />
             <div class="title-section">
               <h2>Lazap</h2>
-              <h3>⦁ Open-Source</h3>
+              <h3>Software</h3>
             </div>
             <a href="https://github.com/Lazap-Development/Lazap" target="_blank"
-              >Source Code</a
+              >👨‍💻 Source Code</a
             >
           </div>
           <p>
-            A lightweight Cross-Platform Software, unifying various clients into
-            a single, modern library. Backend uses Rust, Frontend uses Vue +
-            Vite, thanks to the Tauri toolkit. Received over 100+ user-given
-            stars on GitHub, and perceived by Engineers within companies such as
-            1Password. Certified as a 100% clean software by Softpedia.
+            A lightweight cross-platform software unifying 10+ clients into a
+            single modern library. Built with Rust backend, Vue + Vite frontend,
+            and Tauri toolkit. Earned 100+ stars on GitHub and recognition from
+            engineers at companies such as 1Password. Rated 4.5/5 and as a
+            certified 100% clean software by Softpedia.
           </p>
         </div>
         <div class="project">
@@ -31,19 +33,19 @@
             <img src="../assets/icons/rust.png" alt="Rust Logo" />
             <div class="title-section">
               <h2>TRS_24</h2>
-              <h3>⦁ Open-Source</h3>
+              <h3>Game Engine</h3>
             </div>
             <a href="https://github.com/p0ryae/TRS_24" target="_blank"
-              >Source Code</a
+              >👨‍💻 Source Code</a
             >
           </div>
           <p>
-            A versatile game engine developed in Rust, featuring support for
-            both 3D and 2D rendering. Engineered with optimal performance in
-            mind, it leverages the OpenGL 2.0 API for compatibility across a
-            range of GPUs and integrated GPUs, while also offering
-            cross-platform support for Windows, MacOS, Linux, and Android
-            builds.
+            A game engine developed in Rust, featuring support for both 3D and
+            2D rendering. Engineered with optimal performance in mind, it
+            leverages the OpenGL 2.0 API for compatibility across a range of
+            GPUs and integrated GPUs, while also offering cross-platform support
+            for Windows, MacOS, Linux, and Android builds. Published library on
+            crates.io, achieving over 3K+ downloads.
           </p>
         </div>
       </div>
@@ -55,7 +57,7 @@
 export default {
   name: "ProjectComponent",
   mounted() {
-    document.title = "🎯 Project | porya.me";
+    document.title = "Project | porya.me";
   },
 };
 </script>
@@ -70,7 +72,6 @@ p {
   width: 100%;
   color: #e4e4e7;
   margin-bottom: 40px;
-  margin-left: -10px;
 }
 
 .list .project {
@@ -83,10 +84,10 @@ p {
 }
 
 .list .project .item {
-  background-color: #7e4cea;
-  width: 120px;
+  background-color: #fff;
+  border: 4px #7e4cea solid;
   height: 0.6rem;
-  margin-left: -31px;
+  margin-left: -34px;
   width: 0.6rem;
   margin-bottom: -18px;
   border-radius: 50%;
@@ -127,6 +128,7 @@ p {
   text-decoration: none;
   font-weight: 600;
   color: #7e4cea;
+  margin-top: 10px;
 }
 
 .list .project .top a:hover {
@@ -137,6 +139,7 @@ p {
   padding-bottom: 10px;
   margin-bottom: 0px !important;
   margin-top: 0px !important;
+  text-align: justify;
 }
 
 @media screen and (max-width: 768px) {
@@ -145,6 +148,7 @@ p {
   }
 
   .list .project p {
+    text-align: left;
     font-size: 15px;
   }
 

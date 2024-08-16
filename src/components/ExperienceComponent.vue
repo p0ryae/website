@@ -2,7 +2,7 @@
   <div class="middle">
     <div class="inside">
       <h2>💼 Experience</h2>
-      <p>Outlined below is my latest professional experience:</p>
+      <p>Outlined below is my history of professional experience:</p>
       <div class="line"></div>
       <div class="list">
         <div class="job">
@@ -11,20 +11,34 @@
             <img src="../assets/icons/ubc.png" alt="UBC Logo" />
             <div class="title-section">
               <h2>Software Engineer</h2>
-              <h3>⦁ University of British Columbia</h3>
+              <div class="same-line">
+                <h3>University of British Columbia</h3>
+                <a href="javascript:;">📍 Vancouver, BC</a>
+              </div>
             </div>
           </div>
+          <!-- <p></p> -->
         </div>
         <div class="job">
           <div class="item"></div>
           <div class="top">
             <img src="../assets/icons/langara.png" alt="Langara Logo" />
-
             <div class="title-section">
               <h2>Teaching Assistant</h2>
-              <h3>⦁ Langara College</h3>
+              <div class="same-line">
+                <h3>Langara College</h3>
+                <a href="javascript:;">📍 Vancouver, BC</a>
+              </div>
             </div>
           </div>
+          <!-- <p>
+            Assessed labs, assignments, and projects for various Computer
+            Science courses, offering detailed feedback focused on best
+            practices and strategies. Leveraged expertise in diverse programming
+            languages and tools, collaborating closely with the course
+            instructor to comprehend and apply grading criteria and
+            expectations.
+          </p> -->
         </div>
         <div class="job">
           <div class="item"></div>
@@ -33,9 +47,21 @@
 
             <div class="title-section">
               <h2>Lead Software Engineer</h2>
-              <h3>⦁ New Westminster Secondary School</h3>
+              <div class="same-line">
+                <h3>New Westminster Secondary School</h3>
+                <a href="javascript:;">📍 New West, BC</a>
+              </div>
             </div>
           </div>
+          <!-- <p>
+            Architected and engineered LiemComputing, a scalable platform for
+            SD40 secondary-school students, featuring secure code execution
+            through the Linux Kernel's SECCOMP module and efficient RESTful APIs
+            built with Node.js and Express. The platform supports 500+ students
+            annually and handles over 146K+ true-user visits weekly. Wrote
+            detailed technical documentation, spanning 60+ pages, for the
+            platform's nature in terms of design and functionality.
+          </p> -->
         </div>
       </div>
     </div>
@@ -46,7 +72,7 @@
 export default {
   name: "ContactComponent",
   mounted() {
-    document.title = "💼  Experience | porya.me";
+    document.title = "Experience | porya.me";
   },
 };
 </script>
@@ -60,34 +86,63 @@ p {
   height: 100%;
   width: 100%;
   color: #e4e4e7;
-  margin-bottom: 40px;
-  margin-left: -10px;
+  margin-bottom: 20px;
 }
 
 .list .job {
+  padding-left: 30px;
   border-left: 4px solid #7e4ceab9;
-  padding-left: 28px;
+  padding-top: 30px !important;
+  padding-bottom: 15px;
 }
 
 .list .job .item {
-  background-color: #7e4cea;
-  width: 120px;
+  background-color: #fff;
+  border: 4px #7e4cea solid;
   height: 0.6rem;
-  margin-left: -35px;
   width: 0.6rem;
-  margin-bottom: 5px;
   border-radius: 50%;
+  margin-left: -40px;
+  margin-bottom: -40px;
+}
+
+.list .job .item:hover {
+  cursor: pointer;
 }
 
 .list .job .top {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
 }
 
 .list .job .top .title-section {
-  line-height: 35px;
   font-size: 14px;
+  width: 100%;
+}
+
+.list .job .top .title-section .same-line {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  height: 30px;
+  margin-top: -10px
+}
+
+.list .job .top .title-section a {
+  height: 20px;
+  margin-left: auto;
+  text-decoration: none;
+  font-weight: 600;
+  color: #7e4cea;
+  cursor: text;
+  font-size: 16px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .list .project .top h2 {
@@ -98,7 +153,10 @@ p {
   font-size: 16px;
   font-weight: 600;
   color: #8a8a8a;
-  margin-top: -15px;
+  width: 15vw;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .list .job .top img {
@@ -106,19 +164,11 @@ p {
   height: 60px;
   margin-right: 15px;
   user-select: none;
-  margin-top: -15px;
   border-radius: 25%;
 }
 
-.list .job .top a {
-  margin-left: auto;
-  text-decoration: none;
-  font-weight: 600;
-  color: #7e4cea;
-}
-
 .list .job .top a:hover {
-  text-decoration: underline !important;
+  cursor: text;
 }
 
 .list .job p {
@@ -133,34 +183,64 @@ p {
   }
 
   .list .job .top {
-    flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
   }
 
   .list .job .item {
-    margin-left: -32px;
+    margin-left: -35px;
+    margin-bottom: -45px;
   }
 
   .list .job p {
     font-size: 15px;
+    padding-bottom: 20px !important;
   }
 
   .list .job .top img {
-    margin-right: 12px;
+    width: 70px;
+    height: 70px;
   }
 
-  /* .list .job .top .title-section {
+  .list .job .top .title-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
   }
- */
+
+  .list .job .top .title-section .same-line {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+    margin-top: -5px;
+  }
+
+  .list .job .top h2 {
+    font-size: 18px;
+    width: 60vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
   .list .job .top h3 {
     font-size: 15px;
+    width: 60vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 0px !important;
   }
 
   .list .job .top a {
-    font-size: 14px;
-    order: 2;
+    margin-left: 0px !important;
+    font-size: 14px !important;
+    margin-bottom: 0px;
+    margin-top: -10px;
+    margin-left: -4px !important;
   }
 }
 </style>
