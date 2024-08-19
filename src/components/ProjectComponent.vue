@@ -48,6 +48,27 @@
             crates.io, achieving over 3K+ downloads.
           </p>
         </div>
+        <div class="project">
+          <div class="item"></div>
+          <div class="top">
+            <img src="../assets/icons/volvocomm.png" alt="VolvoComm Logo" />
+            <div class="title-section">
+              <h2>VolvoComm</h2>
+              <h3>Messaging</h3>
+            </div>
+            <a href="https://github.com/p0ryae/VolvoComm" target="_blank"
+              >👨‍💻 Source Code</a
+            >
+          </div>
+          <p>
+            A lightweight, secure, and real-time messaging platform, powered by
+            a Rust backend and a React (TypeScript) frontend using Next.js. This
+            project is designed with a strong focus on performance and security.
+            Currently a work in progress, development efforts are centered on
+            expanding features and optimizing both the backend and frontend for
+            maximum efficiency.
+          </p>
+        </div>
       </div>
     </div>
   </div>

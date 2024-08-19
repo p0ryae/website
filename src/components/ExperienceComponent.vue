@@ -239,7 +239,7 @@ p {
     margin-left: 0px !important;
     font-size: 14px !important;
     margin-bottom: 0px;
-    margin-top: -10px;
+    margin-top: -12px;
     margin-left: -4px !important;
   }
 }
