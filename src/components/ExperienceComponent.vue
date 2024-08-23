@@ -1,33 +1,31 @@
 <template>
   <div class="middle">
     <div class="inside">
-      <h2>💼 Experience</h2>
+      <h2>💼 [Experience]</h2>
       <p>Outlined below is my history of professional experience:</p>
       <div class="line"></div>
       <div class="list">
         <div class="job">
-          <div class="item"></div>
           <div class="top">
             <img src="../assets/icons/ubc.png" alt="UBC Logo" />
             <div class="title-section">
               <h2>Software Engineer</h2>
               <div class="same-line">
                 <h3>University of British Columbia</h3>
-                <a href="javascript:;">📍 Vancouver, BC</a>
+                <h4>Vancouver, BC</h4>
               </div>
             </div>
           </div>
           <!-- <p></p> -->
         </div>
         <div class="job">
-          <div class="item"></div>
           <div class="top">
             <img src="../assets/icons/langara.png" alt="Langara Logo" />
             <div class="title-section">
               <h2>Teaching Assistant</h2>
               <div class="same-line">
                 <h3>Langara College</h3>
-                <a href="javascript:;">📍 Vancouver, BC</a>
+                <h4>Vancouver, BC</h4>
               </div>
             </div>
           </div>
@@ -41,7 +39,6 @@
           </p> -->
         </div>
         <div class="job">
-          <div class="item"></div>
           <div class="top">
             <img src="../assets/icons/nwss.png" alt="Langara Logo" />
 
@@ -49,7 +46,7 @@
               <h2>Lead Software Engineer</h2>
               <div class="same-line">
                 <h3>New Westminster Secondary School</h3>
-                <a href="javascript:;">📍 New West, BC</a>
+                <h4>New Westminster, BC</h4>
               </div>
             </div>
           </div>
@@ -86,13 +83,15 @@ p {
   height: 100%;
   width: 100%;
   color: #e4e4e7;
-  margin-bottom: 20px;
 }
 
 .list .job {
-  padding-left: 30px;
+  padding: 10px;
+  padding-left: 25px;
   border-left: 4px solid #7e4ceab9;
-  padding-top: 30px !important;
+}
+
+.list .job:not(:last-child) {
   padding-bottom: 15px;
 }
 
@@ -102,8 +101,6 @@ p {
   height: 0.6rem;
   width: 0.6rem;
   border-radius: 50%;
-  margin-left: -40px;
-  margin-bottom: -40px;
 }
 
 .list .job .item:hover {
@@ -122,13 +119,28 @@ p {
   width: 100%;
 }
 
+.list .job .top .title-section h2 {
+  margin-top: 0px;
+}
+
 .list .job .top .title-section .same-line {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: flex-start;
   width: 100%;
-  align-items: center;
-  height: 30px;
-  margin-top: -10px
+}
+
+.list .job .top .title-section .same-line h3 {
+  margin-top: 0px;
+  margin-bottom: 4px;
+  color: #e4e4e7;
+}
+
+.list .job .top .title-section .same-line h4 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: #8a8a8a;
+  font-weight: 600;
 }
 
 .list .job .top .title-section a {
@@ -136,7 +148,6 @@ p {
   margin-left: auto;
   text-decoration: none;
   font-weight: 600;
-  color: #7e4cea;
   cursor: text;
   font-size: 16px;
 
@@ -153,10 +164,6 @@ p {
   font-size: 16px;
   font-weight: 600;
   color: #8a8a8a;
-  width: 15vw;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .list .job .top img {
@@ -178,10 +185,6 @@ p {
 }
 
 @media screen and (max-width: 768px) {
-  .list .job {
-    padding-left: 25px;
-  }
-
   .list .job .top {
     flex-direction: row;
     justify-content: flex-start;
@@ -215,12 +218,11 @@ p {
     flex-direction: column;
     align-items: flex-start;
     height: 100%;
-    margin-top: -5px;
   }
 
   .list .job .top h2 {
     font-size: 18px;
-    width: 60vw;
+    width: 55vw;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -228,11 +230,10 @@ p {
 
   .list .job .top h3 {
     font-size: 15px;
-    width: 60vw;
+    width: 55vw;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin-top: 0px !important;
   }
 
   .list .job .top a {

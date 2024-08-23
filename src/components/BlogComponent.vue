@@ -1,7 +1,7 @@
 <template>
   <div class="middle">
     <div class="inside">
-      <h2>📰 Blog</h2>
+      <h2>📰 [Blog]</h2>
       <p>Soon...</p>
     </div>
   </div>

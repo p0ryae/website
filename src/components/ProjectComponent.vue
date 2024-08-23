@@ -1,14 +1,13 @@
 <template>
   <div class="middle">
     <div class="inside">
-      <h2>🎯 Projects</h2>
+      <h2>🎯 [Projects]</h2>
       <p>
         Most of my projects are @ github, with below being the most notable:
       </p>
       <div class="line"></div>
       <div class="list">
         <div class="project">
-          <div class="item"></div>
           <div class="top">
             <img src="../assets/icons/lazap.png" alt="Lazap Logo" />
             <div class="title-section">
@@ -20,15 +19,14 @@
             >
           </div>
           <p>
-            A lightweight cross-platform software unifying 10+ clients into a
-            single modern library. Built with Rust backend, Vue + Vite frontend,
-            and Tauri toolkit. Earned 100+ stars on GitHub and recognition from
-            engineers at companies such as 1Password. Rated 4.5/5 and as a
-            certified 100% clean software by Softpedia.
+            A lightweight cross-platform unification software that consolidates
+            10+ clients into a single modern library. Built with a Rust backend,
+            and Vue + Vite frontend. Earned 100+ stars on GitHub and received
+            recognition from engineers at companies such as 1Password. Rated
+            4.5/5 and certified as a 100% clean software by Softpedia.
           </p>
         </div>
         <div class="project">
-          <div class="item"></div>
           <div class="top">
             <img src="../assets/icons/rust.png" alt="Rust Logo" />
             <div class="title-section">
@@ -49,7 +47,6 @@
           </p>
         </div>
         <div class="project">
-          <div class="item"></div>
           <div class="top">
             <img src="../assets/icons/volvocomm.png" alt="VolvoComm Logo" />
             <div class="title-section">
@@ -62,7 +59,7 @@
           </div>
           <p>
             A lightweight, secure, and real-time messaging platform, powered by
-            a Rust backend and a React (TypeScript) frontend using Next.js. This
+            a Rust backend and a React (with TypeScript) frontend using Next.js. This
             project is designed with a strong focus on performance and security.
             Currently a work in progress, development efforts are centered on
             expanding features and optimizing both the backend and frontend for
@@ -92,12 +89,11 @@ p {
   height: 100%;
   width: 100%;
   color: #e4e4e7;
-  margin-bottom: 40px;
 }
 
 .list .project {
   border-left: 4px solid #7e4ceab9;
-  padding-left: 24px;
+  padding-left: 25px;
 }
 
 .list .project:not(:last-child) {

@@ -163,17 +163,17 @@ footer {
   margin-top: 20px;
 }
 
-@media only screen and (max-width: 1600px) {
+@media only screen and (max-width: 1400px) {
   .header {
     padding: 1.5rem 1.5rem;
   }
 
   .titlebar {
-    width: 100% !important;
+    width: 60% !important;
   }
 
   .inside {
-    width: 87% !important;
+    width: 58% !important;
   }
 
   .sections {
@@ -185,9 +185,27 @@ footer {
   }
 }
 
+@media only screen and (max-width: 800px) {
+  .titlebar {
+    width: 80% !important;
+  }
+
+  .inside {
+    width: 78% !important;
+  }
+}
+
 @media screen and (max-width: 568px) {
   .middle .center-phone {
     align-items: center !important;
+  }
+
+  .titlebar {
+    width: 100% !important;
+  }
+
+  .inside {
+    width: 87% !important;
   }
 }
 </style>
