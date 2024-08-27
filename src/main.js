@@ -4,9 +4,9 @@ import HomeComponent from './components/HomeComponent.vue'
 import ProjectComponent from './components/ProjectComponent.vue'
 import BlogComponent from './components/BlogComponent.vue'
 import ExperienceComponent from './components/ExperienceComponent.vue'
-
 import App from './App.vue'
 
+import './globals.css'
 import 'animate.css';
 
 const router = createRouter({
