@@ -4,12 +4,16 @@
   import "@fontsource/jetbrains-mono/400.css";
   import "@fontsource/jetbrains-mono/700.css";
   import { shared } from "$lib/shared.svelte";
+  import { logoUrls } from "$lib/logos";
 
   let { children } = $props();
 </script>
 
 <svelte:head>
   <link rel="icon" href={favicon} />
+  {#each logoUrls as url}
+    <link rel="preload" as="image" href={url} />
+  {/each}
 </svelte:head>
 
 <div class="container">

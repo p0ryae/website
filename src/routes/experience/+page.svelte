@@ -1,8 +1,6 @@
 <script lang="ts">
   import "./style.css";
-  import corvus from "$lib/assets/logos/corvus.png";
-  import ubc from "$lib/assets/logos/ubc.png";
-  import langara from "$lib/assets/logos/langara.png";
+  import { logo } from "$lib/logos";
 
   interface Role {
     title: string;
@@ -24,7 +22,7 @@
     {
       org: "Corvus Energy",
       url: "https://corvusenergy.com/",
-      logo: corvus,
+      logo: logo("corvus"),
       lightBg: true,
       location: "Richmond, BC",
       roles: [
@@ -45,7 +43,7 @@
     {
       org: "University of British Columbia",
       url: "https://ubc.ca/",
-      logo: ubc,
+      logo: logo("ubc"),
       location: "Vancouver, BC",
       roles: [
         {
@@ -71,7 +69,7 @@
     {
       org: "Langara College",
       url: "https://langara.ca/",
-      logo: langara,
+      logo: logo("langara"),
       location: "Vancouver, BC",
       roles: [
         {
