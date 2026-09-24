@@ -1,7 +1,7 @@
 <script>
   import Icon from "@iconify/svelte";
+  import { shared } from "$lib/shared.svelte";
 
-  const name = "Porya Dashtipour";
   const ipa = "[puriːjɑː]";
 
   const facts = [
@@ -53,12 +53,12 @@
 </script>
 
 <svelte:head>
-  <title>{name}</title>
+  <title>{shared.name}</title>
 </svelte:head>
 
 <div class="home">
   <div class="main-content">
-    <p>Hey there! My name is {name}. Below are some facts about me:</p>
+    <p>Hey there! My name is {shared.name}. Below are some facts about me:</p>
     <ul class="facts">
       {#each facts as fact}
         <li>

@@ -3,10 +3,9 @@
   import favicon from "$lib/assets/favicon.svg";
   import "@fontsource/jetbrains-mono/400.css";
   import "@fontsource/jetbrains-mono/700.css";
+  import { shared } from "$lib/shared.svelte";
 
   let { children } = $props();
-
-  const name = "Porya Dashtipour";
 </script>
 
 <svelte:head>
@@ -15,7 +14,7 @@
 
 <div class="container">
   <div class="prompt-bar">
-    <span class="prompt-tag">[{name}] $</span>
+    <span class="prompt-tag">[{shared.name}] $</span>
     <span class="prompt-path">
       ./<a href="/">home</a> ./<a href="/experience">experience</a>
     </span>
