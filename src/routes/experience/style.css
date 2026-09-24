@@ -8,7 +8,7 @@
 
 h2 {
   margin: 0 0 8px;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 
 .item {
@@ -54,7 +54,7 @@ h2 {
 
 .org {
   margin: 0;
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   font-weight: 700;
 }
 
@@ -78,7 +78,7 @@ h2 {
 }
 
 .roles {
-  margin-top: 12px;
+  margin-top: 8px;
   display: flex;
   flex-direction: column;
   gap: 16px;

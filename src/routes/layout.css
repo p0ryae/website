@@ -20,7 +20,7 @@ body {
   padding: 0;
   background: var(--bg);
   color: var(--text);
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.6;
   font-family:
     "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
@@ -52,7 +52,7 @@ code {
 }
 
 .container {
-  max-width: 860px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 48px 20px;
 }

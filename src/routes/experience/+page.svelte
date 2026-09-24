@@ -78,8 +78,8 @@
           title: "Teaching Assistant",
           period: "May 2024 — Aug 2025",
           bullets: [
-            "Taught Java OOP fundamentals",
-            "Supported CPSC 4800 and CPSC 4810",
+            "Assisted in teaching foundational course covering core Object-Oriented Programming (OOP) concepts using Java",
+            "Supported upper-level courses including CPSC 4800 and CPSC 4810 focused on data processing and analytics",
           ],
         },
       ],

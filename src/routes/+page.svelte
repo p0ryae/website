@@ -43,10 +43,15 @@
     [
       { text: "I can read, write and speak " },
       {
+        text: "English",
+        href: "https://en.wikipedia.org/wiki/English_language",
+      },
+      { text: ", " },
+      {
         text: "Persian",
         href: "https://en.wikipedia.org/wiki/Persian_language",
       },
-      { text: " and " },
+      { text: " and some " },
       { text: "Latin", href: "https://en.wikipedia.org/wiki/Latin" },
     ],
   ];
@@ -72,7 +77,8 @@
     <p>
       You can view my experience by running
       <a href="/experience"><code>./experience</code></a> in shell (or to put in
-      human terms, press the <a href="/experience"><code>./experience</code></a>
+      non-technical terms, press the
+      <a href="/experience"><code>./experience</code></a>
       section up top).
     </p>
     <p>
@@ -84,13 +90,17 @@
     <div class="handle">𓄂𓆃 {ipa}</div>
     <div class="desc">Reach out to me via:</div>
     <div class="icon-row">
-      <a href="https://github.com/p0ryae" aria-label="GitHub">
+      <a href="https://github.com/p0ryae" target="_blank" aria-label="GitHub">
         <Icon icon="mdi:github" width={26} />
       </a>
-      <a href="https://www.linkedin.com/in/p0ryae/" aria-label="LinkedIn">
+      <a
+        href="https://www.linkedin.com/in/p0ryae/"
+        target="_blank"
+        aria-label="LinkedIn"
+      >
         <Icon icon="mdi:linkedin" width={26} />
       </a>
-      <a href="mailto:contact@porya.me" aria-label="Email">
+      <a href="mailto:contact@porya.me" target="_blank" aria-label="Email">
         <Icon icon="mdi:email-outline" width={26} />
       </a>
     </div>
@@ -103,9 +113,14 @@
       and
       <a href="https://deno.com/" target="_blank" rel="noopener noreferrer"
         >Deno</a
+      >. Inspired by
+      <a
+        href="https://github.com/joeroe/risotto"
+        target="_blank"
+        rel="noopener noreferrer">Risotto</a
       >. You can find the source code
       <a
-        href="https://github.com/p0ryae/REPO_NAME"
+        href="https://github.com/p0ryae/website"
         target="_blank"
         rel="noopener noreferrer">here</a
       >.
