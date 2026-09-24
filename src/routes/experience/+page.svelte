@@ -29,7 +29,7 @@
       location: "Richmond, BC",
       roles: [
         {
-          title: "Software Engineer Co-op, Systems",
+          title: "Software Engineer, Systems",
           type: "Co-op",
           period: "Jan 2026 — Aug 2026",
           bullets: [

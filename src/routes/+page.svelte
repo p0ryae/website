@@ -6,7 +6,8 @@
 
   const facts = [
     [
-      { text: "Computer Science @ " },
+      { text: "Computer Science", href: "https://www.cs.ubc.ca/about/numbers" },
+      { text: " @ " },
       { text: "University of British Columbia", href: "https://www.ubc.ca/" },
     ],
     [
