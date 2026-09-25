@@ -1,12 +1,65 @@
-<script>
+<script lang="ts">
   import "./layout.css";
   import favicon from "$lib/assets/favicon.svg";
   import "@fontsource/jetbrains-mono/400.css";
   import "@fontsource/jetbrains-mono/700.css";
   import { shared } from "$lib/shared.svelte";
   import { logoUrls } from "$lib/logos";
+  import { goto } from "$app/navigation";
+  import { onMount } from "svelte";
 
   let { children } = $props();
+
+  const commands: Record<string, string> = {
+    "./home": "/",
+    "./experience": "/experience",
+  };
+
+  let typed = $state("");
+  let typing = $state(false);
+
+  onMount(() => {
+    function handleKeydown(e: KeyboardEvent) {
+      const tag = document.activeElement?.tagName;
+      if (tag === "INPUT" || tag === "TEXTAREA") return;
+      if (e.metaKey || e.ctrlKey || e.altKey) return;
+
+      if (e.key === "Escape") {
+        typed = "";
+        typing = false;
+        return;
+      }
+
+      if (e.key === "Enter") {
+        const route = commands[typed];
+        if (route) goto(route);
+        typed = "";
+        typing = false;
+        return;
+      }
+
+      if (e.key === "Backspace") {
+        typed = typed.slice(0, -1);
+        typing = typed.length > 0;
+        return;
+      }
+
+      if (e.key.length === 1) {
+        typed += e.key;
+        typing = true;
+
+        const route = commands[typed];
+        if (route) {
+          goto(route);
+          typed = "";
+          typing = false;
+        }
+      }
+    }
+
+    window.addEventListener("keydown", handleKeydown);
+    return () => window.removeEventListener("keydown", handleKeydown);
+  });
 </script>
 
 <svelte:head>
@@ -20,7 +73,11 @@
   <div class="prompt-bar">
     <span class="prompt-tag">[{shared.name}] $</span>
     <span class="prompt-path">
-      ./<a href="/">home</a> ./<a href="/experience">experience</a>
+      {#if typing}
+        {typed}<span class="cursor">▌</span>
+      {:else}
+        ./<a href="/">home</a> ./<a href="/experience">experience</a>
+      {/if}
     </span>
   </div>
 

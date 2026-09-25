@@ -6,6 +6,7 @@
 
   const facts = [
     [
+      { text: "Studying " },
       { text: "Computer Science", href: "https://www.cs.ubc.ca/about/numbers" },
       { text: " @ " },
       { text: "University of British Columbia", href: "https://www.ubc.ca/" },
@@ -13,29 +14,34 @@
     [
       { text: "Specialized in " },
       {
-        text: "Systems",
+        text: "Systems Programming",
         href: "https://en.wikipedia.org/wiki/Systems_programming",
+      },
+      { text: ", " },
+      {
+        text: "OS Internals",
+        href: "https://en.wikipedia.org/wiki/Operating_system",
       },
       { text: ", " },
       {
         text: "Networking",
         href: "https://en.wikipedia.org/wiki/Computer_network",
       },
-      { text: " and " },
+      { text: ", and " },
       {
         text: "Software Architecture",
         href: "https://en.wikipedia.org/wiki/Software_architecture",
       },
     ],
     [
-      { text: "" },
+      { text: " " },
       { text: "Arch Linux", href: "https://archlinux.org/" },
-      { text: " veteran, current " },
+      { text: " veteran, present " },
       { text: "NixOS", href: "https://nixos.org/" },
-      { text: " configurator" },
+      { text: " endless configurator" },
     ],
     [
-      { text: "Casual " },
+      { text: "Casual free-thinking " },
       { text: "philosophy", href: "https://en.wikipedia.org/wiki/Philosophy" },
       { text: " and " },
       { text: "history", href: "https://en.wikipedia.org/wiki/History" },
@@ -64,7 +70,7 @@
 
 <div class="home">
   <div class="main-content">
-    <p>Hey there! My name is {shared.name}. Below are some facts about me:</p>
+    <p>Greetings. My name is {shared.name}. Below are some facts about me:</p>
     <ul class="facts">
       {#each facts as fact}
         <li>
@@ -77,10 +83,15 @@
     </ul>
     <p>
       You can view my experience by running
-      <a href="/experience"><code>./experience</code></a> in shell (or to put in
-      non-technical terms, press the
-      <a href="/experience"><code>./experience</code></a>
-      section up top).
+      <code>./experience</code> in the shell here. If you are too lazy, not
+      cool, or non-technical, press the provided
+      <code>./experience</code>
+      hyperlink up top.
+    </p>
+    <p>
+      Feel free to visit <a href="https://github.com/p0ryae" target="_blank"
+        >my github</a
+      > to checkout my most notable projects.
     </p>
     <p>
       Blog is coming soon (been planning to review the cs courses I've taken)...
