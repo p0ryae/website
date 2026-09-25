@@ -36,9 +36,9 @@
     [
       { text: " " },
       { text: "Arch Linux", href: "https://archlinux.org/" },
-      { text: " veteran, present " },
+      { text: " veteran, current " },
       { text: "NixOS", href: "https://nixos.org/" },
-      { text: " endless configurator" },
+      { text: " limitless configurator" },
     ],
     [
       { text: "Casual free-thinking " },
@@ -48,17 +48,17 @@
       { text: " enthusiast" },
     ],
     [
-      { text: "I can read, write and speak " },
+      { text: "Fluent in " },
       {
         text: "English",
         href: "https://en.wikipedia.org/wiki/English_language",
       },
-      { text: ", " },
+      { text: " and " },
       {
         text: "Persian",
         href: "https://en.wikipedia.org/wiki/Persian_language",
       },
-      { text: " and some " },
+      { text: ", with some knowledge of " },
       { text: "Latin", href: "https://en.wikipedia.org/wiki/Latin" },
     ],
   ];
@@ -71,7 +71,7 @@
 <div class="home">
   <div class="main-content">
     <p>
-      Greetings. My name is {shared.name} and welcome to my portfolio. Below are
+      Hey there! My name is {shared.name} and welcome to my portfolio. Below are
       some facts about me:
     </p>
     <ul class="facts">
