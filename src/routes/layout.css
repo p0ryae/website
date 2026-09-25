@@ -148,6 +148,10 @@ code {
 .icon-row a {
   color: var(--muted);
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
 }
 
 .icon-row a:hover {

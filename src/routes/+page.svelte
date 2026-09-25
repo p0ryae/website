@@ -70,7 +70,10 @@
 
 <div class="home">
   <div class="main-content">
-    <p>Greetings. My name is {shared.name}. Below are some facts about me:</p>
+    <p>
+      Greetings. My name is {shared.name} and welcome to my portfolio. Below are
+      some facts about me:
+    </p>
     <ul class="facts">
       {#each facts as fact}
         <li>
