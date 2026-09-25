@@ -73,7 +73,7 @@
       location: "Vancouver, BC",
       roles: [
         {
-          title: "Teaching Assistant",
+          title: "Teaching Assistant, Department of Computer Science",
           period: "May 2024 — Aug 2025",
           bullets: [
             "Assisted in teaching foundational course covering core Object-Oriented Programming (OOP) concepts using Java",
