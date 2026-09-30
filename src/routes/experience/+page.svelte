@@ -28,15 +28,9 @@
       roles: [
         {
           title: "Software Engineer, Systems",
-          type: "Co-op",
+          type: "Internship",
           period: "Jan 2026 — Aug 2026",
-          bullets: [
-            "Built a Nix-based OS for BMS Pack Controllers",
-            "Created an atomic A/B OTA pipeline with golden rollback",
-            "Engineered an Azure Elixir/OTP IoT edge runtime over MQTT",
-            "Added a ratatui TUI to the BMS CLI, cutting MTTR by 45%",
-            "Cut validation time 65% with a QEMU-based test suite",
-          ],
+          bullets: [],
         },
       ],
     },
@@ -49,20 +43,12 @@
         {
           title: "Software Engineer II",
           period: "Sept 2026 — Present",
-          bullets: [
-            "Shipped 15+ features in a React Native and Expo app",
-            "Cut load time 35% with lazy-loaded navigation",
-          ],
+          bullets: [],
         },
         {
           title: "Software Engineer I",
           period: "Sept 2024 — Dec 2025",
-          bullets: [
-            "Built full-stack apps with React, Node.js and MongoDB",
-            "Cut deploy time 45% with a Turborepo monorepo",
-            "Reached 87% coverage with Jest, Playwright and Docker",
-            "Integrated SAML2 and OAuth 2.0 campus authentication",
-          ],
+          bullets: [],
         },
       ],
     },
@@ -75,10 +61,20 @@
         {
           title: "Teaching Assistant, Department of Computer Science",
           period: "May 2024 — Aug 2025",
-          bullets: [
-            "Assisted in teaching foundational course covering core Object-Oriented Programming (OOP) concepts using Java",
-            "Supported upper-level courses including CPSC 4800 and CPSC 4810 focused on data processing and analytics",
-          ],
+          bullets: [],
+        },
+      ],
+    },
+    {
+      org: "New Westminster Secondary School",
+      url: "https://liemcomputing.ca/",
+      logo: logo("nwss"),
+      location: "New Westminster, BC",
+      roles: [
+        {
+          title: "Lead Software Engineer",
+          period: "Sept 2022 — Aug 2023",
+          bullets: [],
         },
       ],
     },
@@ -99,6 +95,22 @@
   <title>Porya Dashtipour — Experience</title>
 </svelte:head>
 
+{#snippet bulletList(items: string[])}
+  {#if items?.length}
+    <ul class="bullets">
+      {#each items as b}<li>{b}</li>{/each}
+    </ul>
+  {/if}
+{/snippet}
+
+{#snippet orgName(job: Company)}
+  {#if job.url}
+    <a href={job.url} target="_blank" rel="noopener noreferrer">{job.org}</a>
+  {:else}
+    {job.org}
+  {/if}
+{/snippet}
+
 <h2>Experience</h2>
 
 {#each experience as job}
@@ -115,33 +127,34 @@
     </div>
 
     <div class="body">
-      <h3 class="org">
-        {#if job.url}
-          <a href={job.url} target="_blank" rel="noopener noreferrer"
-            >{job.org}</a
-          >
-        {:else}
-          {job.org}
-        {/if}
-      </h3>
-      {#if job.location}<div class="muted">{job.location}</div>{/if}
+      {#if job.roles.length === 1}
+        {@const r = job.roles[0]}
+        <h3 class="org">{r.title}</h3>
+        <div class="company">
+          {@render orgName(job)}{#if r.type}<span class="dot">·</span
+            >{r.type}{/if}
+        </div>
+        <div class="muted">
+          {r.period}{#if job.location}<span class="dot">·</span
+            >{job.location}{/if}
+        </div>
+        {@render bulletList(r.bullets)}
+      {:else}
+        <h3 class="org">{@render orgName(job)}</h3>
+        {#if job.location}<div class="muted">{job.location}</div>{/if}
 
-      <div class="roles" class:multi={job.roles.length > 1}>
-        {#each job.roles as r}
-          <div class="role-block">
-            <h4 class="role">{r.title}</h4>
-            <div class="muted">
-              {r.period}{#if r.type}<span class="dot">·</span>{r.type}{/if}
+        <div class="roles multi">
+          {#each job.roles as r}
+            <div class="role-block">
+              <h4 class="role">{r.title}</h4>
+              <div class="muted">
+                {r.period}{#if r.type}<span class="dot">·</span>{r.type}{/if}
+              </div>
+              {@render bulletList(r.bullets)}
             </div>
-
-            {#if r.bullets?.length}
-              <ul class="bullets">
-                {#each r.bullets as b}<li>{b}</li>{/each}
-              </ul>
-            {/if}
-          </div>
-        {/each}
-      </div>
+          {/each}
+        </div>
+      {/if}
     </div>
   </article>
 {/each}

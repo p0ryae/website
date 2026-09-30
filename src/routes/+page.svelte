@@ -38,7 +38,7 @@
       { text: "Arch Linux", href: "https://archlinux.org/" },
       { text: " veteran, current " },
       { text: "NixOS", href: "https://nixos.org/" },
-      { text: " limitless configurator" },
+      { text: " configurator" },
     ],
     [
       { text: "Casual free-thinking " },

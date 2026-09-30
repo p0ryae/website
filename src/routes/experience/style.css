@@ -68,6 +68,20 @@ h2 {
   text-decoration: underline;
 }
 
+.company {
+  font-weight: 500;
+}
+
+.company a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.company a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
 .muted {
   color: var(--muted);
   font-size: 0.9rem;
