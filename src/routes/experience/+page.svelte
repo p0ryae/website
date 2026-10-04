@@ -28,7 +28,7 @@
       roles: [
         {
           title: "Software Engineer, Systems",
-          type: "Internship",
+          type: "Co-op",
           period: "Jan 2026 — Aug 2026",
           bullets: [],
         },
