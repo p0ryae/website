@@ -85,11 +85,10 @@
       {/each}
     </ul>
     <p>
-      You can view my experience by running
-      <code>./experience</code> in the shell here. If you are too lazy, not
-      cool, or non-technical, press the provided
-      <code>./experience</code>
-      hyperlink up top.
+      You can view my experience or projects by typing
+      <code>./experience</code> or <code>./projects</code> in the shell here. If
+      you're too lazy, on a phone, or non-technical, you can use the provided hyperlinks
+      next to the shell up top, which are highlighted in yellow.
     </p>
     <p>
       Feel free to visit <a href="https://github.com/p0ryae" target="_blank"

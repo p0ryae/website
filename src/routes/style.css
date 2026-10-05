@@ -28,7 +28,7 @@ h2 {
   height: 56px;
   border-radius: 6px;
   overflow: hidden;
-  background: var(--prompt-bg);
+  background: #131313;
   color: var(--prompt-text);
   display: grid;
   place-items: center;

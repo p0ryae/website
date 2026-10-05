@@ -1,5 +1,5 @@
 <script lang="ts">
-  import "./style.css";
+  import "../style.css";
   import { logo } from "$lib/logos";
 
   interface Role {
