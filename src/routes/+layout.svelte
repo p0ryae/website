@@ -108,7 +108,9 @@
 
 <div class="container">
   <div class="prompt-bar">
-    <span class="prompt-tag">[{shared.name}] $</span>
+    <span class="prompt-tag"
+      >[{shared.name.split(" ")[0].toLowerCase()}@{shared.domain}] $</span
+    >
     <span class="prompt-path">
       {#if typing}
         {typed}<span class="cursor">▌</span>
