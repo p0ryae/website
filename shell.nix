@@ -4,10 +4,7 @@
 
 pkgs.mkShell {
   packages = with pkgs; [
-    deno
+    nodejs_latest
+    yarn-berry
   ];
-
-  shellHook = ''
-    exec fish
-  '';
 }

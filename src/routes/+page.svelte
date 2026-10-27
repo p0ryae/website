@@ -87,8 +87,8 @@
     <p>
       You can view my experience or projects by typing
       <code>./experience</code> or <code>./projects</code> in the shell here. If
-      you're too lazy, on a phone, or non-technical, you can use the provided hyperlinks
-      next to the shell up top, which are highlighted in yellow.
+      you're on a phone, you can use the provided hyperlinks next to the shell up
+      top, which are highlighted in yellow.
     </p>
     <p>
       Feel free to visit <a href="https://github.com/p0ryae" target="_blank"
@@ -125,8 +125,8 @@
         >Svelte</a
       >
       and
-      <a href="https://deno.com/" target="_blank" rel="noopener noreferrer"
-        >Deno</a
+      <a href="https://nodejs.org/" target="_blank" rel="noopener noreferrer"
+        >Node.js</a
       >. Inspired by
       <a
         href="https://github.com/joeroe/risotto"
