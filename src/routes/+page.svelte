@@ -124,7 +124,7 @@
     {
       name: "Lazap",
       href: "https://github.com/p0ryae/Lazap",
-      stack: "C++, ImGUI, GLFW, GLEW",
+      stack: "C++, ImGUI, GLFW, libwayland, GLEW",
       desc: "A native, cross-platform attempt to unify video games into one fast, modern environment. It consolidate 10+ clients into a single unified application. Reverse-engineered Valve’s proprietary binary VDF format and built a fast, memory-safe, zero-copy parser for it. Project has earned 130+ GitHub stars and gained visibility among engineers at companies such as 1Password and Databricks.",
     },
     {
@@ -136,39 +136,39 @@
     {
       name: "interline-tts",
       href: "https://github.com/UBC-Korean-Studies/interline-tts",
-      stack: "Python, gRPC, ONNX Runtime, Supertonic 3",
+      stack: "Python, gRPC, Supertonic 3",
       desc: "A low-latency gRPC speech synthesis service for UBC's InterlineReader, the online reader used by Korean literature students. It runs Supertonic 3 on ONNX Runtime to read Korean text aloud on demand, so students can hear the stories they are studying. Its efficient implementation and ongoing maintenance were part of my job as a Software Engineer at UBC.",
     },
     {
       name: "nix",
       href: "https://github.com/p0ryae/nix",
-      stack: "Nix, NixOS, Linux, Flakes",
+      stack: "Nix, NixOS, Linux",
       desc: "An opinionated NixOS flake for homelab, development and gaming systems. It keeps the configuration for all of these machines declarative and reproducible, managed from a single flake. I use it for my Framework 13 Pro, Raspberry PI 5, and my main desktop at home. It is actively maintained with best practices in mind.",
     },
   ];
 
-  type Post = {
-    slug: string;
-    title: string;
-    date: string;
-    summary: string;
-  };
+  // type Post = {
+  //   slug: string;
+  //   title: string;
+  //   date: string;
+  //   summary: string;
+  // };
 
-  const posts: Post[] = [
-    {
-      slug: "llms-as-cs",
-      title: "Hello, World! Or... Hello LLMs?",
-      date: "Nov 2026",
-      summary:
-        "How LLMs have impacted the life of an average Computer Science student across the world.",
-    },
-    // {
-    //   slug: "cs-courses-review",
-    //   title: "Reviewing Every CS Course I've Taken",
-    //   date: "Nov 2026",
-    //   summary: "Honest feedback on the degree, course by course.",
-    // },
-  ];
+  // const posts: Post[] = [
+  //   {
+  //     slug: "llms-as-cs",
+  //     title: "Hello, World! Or... Hello LLMs?",
+  //     date: "Nov 2026",
+  //     summary:
+  //       "How LLMs have impacted the life of an average Computer Science student across the world.",
+  //   },
+  //   // {
+  //   //   slug: "cs-courses-review",
+  //   //   title: "Reviewing Every CS Course I've Taken",
+  //   //   date: "Nov 2026",
+  //   //   summary: "Honest feedback on the degree, course by course.",
+  //   // },
+  // ];
 
   const sections = ["about", "experience", "projects"];
 </script>
@@ -183,17 +183,23 @@
 <dl class="kv">
   <dd>
     <div class="icon-row">
-      <a href="https://github.com/p0ryae" target="_blank" aria-label="GitHub">
+      <a
+        href="https://github.com/p0ryae"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="GitHub"
+      >
         <Icon icon="mdi:github" width={26} />
       </a>
       <a
         href="https://www.linkedin.com/in/p0ryae/"
         target="_blank"
+        rel="noopener noreferrer"
         aria-label="LinkedIn"
       >
         <Icon icon="mdi:linkedin" width={26} />
       </a>
-      <a href="mailto:contact@porya.me" target="_blank" aria-label="Email">
+      <a href="mailto:contact@porya.me" aria-label="Email">
         <Icon icon="mdi:email-outline" width={26} />
       </a>
     </div>
@@ -201,7 +207,7 @@
 </dl>
 
 <nav>
-  {#each sections as s}<a href="#{s}">{s[0].toUpperCase() + s.slice(1)}</a
+  {#each sections as s (s)}<a href="#{s}">{s[0].toUpperCase() + s.slice(1)}</a
     >{/each}
 </nav>
 
@@ -216,19 +222,21 @@
   facts about me:
 </p>
 <ul>
-  {#each facts as fact}
+  {#each facts as fact, i (i)}
     <li>
-      {#each fact as part}{#if part.href}
-          <a href={part.href} target="_blank" rel="noopener noreferrer"
+      {#each fact as part, k (k)}{#if part.href}
+          <a href={part.href} target="_blank" rel="external noopener noreferrer"
             >{part.text}</a
           >{:else}{part.text}{/if}{/each}
     </li>
   {/each}
 </ul>
 <p>
-  Feel free to visit <a href="https://github.com/p0ryae" target="_blank"
-    >my github</a
-  > to checkout my most notable projects (they are pinned) and their source codes.
+  Feel free to visit
+  <a href="https://github.com/p0ryae" target="_blank" rel="noopener noreferrer">
+    my GitHub
+  </a>
+  to check out my most notable projects (they are pinned) and their source code.
 </p>
 
 <h2 id="experience">Experience</h2>
@@ -238,7 +246,7 @@
       <tr><th>Dates</th><th>Role</th><th>Organization</th></tr>
     </thead>
     <tbody>
-      {#each experience as j}
+      {#each experience as j (j.dates)}
         <tr>
           <td>
             {j.dates}
@@ -259,7 +267,7 @@
 </div>
 
 <h2 id="projects">Projects</h2>
-{#each projects as p}
+{#each projects as p (p.name)}
   <h3>
     <a href={p.href} target="_blank" rel="noopener noreferrer">{p.name}</a>
   </h3>
