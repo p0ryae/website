@@ -123,7 +123,7 @@
   const projects: Project[] = [
     {
       name: "Lazap",
-      href: "https://github.com/p0ryae/Lazap",
+      href: "https://github.com/Lazap-Development/Lazap",
       stack: "C++, ImGUI, GLFW, libwayland, GLEW",
       desc: "A native, cross-platform attempt to unify video games into one fast, modern environment. It consolidate 10+ clients into a single unified application. Reverse-engineered Valve’s proprietary binary VDF format and built a fast, memory-safe, zero-copy parser for it. Project has earned 130+ GitHub stars and gained visibility among engineers at companies such as 1Password and Databricks.",
     },
