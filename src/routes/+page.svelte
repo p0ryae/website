@@ -1,6 +1,6 @@
 <script lang="ts">
   import Icon from "@iconify/svelte";
-  import { shared } from "$lib/shared.svelte";
+  import { shared } from "#lib/shared.svelte";
 
   const ipa = "[puriːjɑː dæʃtiːpuːɾ]";
 
